@@ -1,13 +1,17 @@
-// let mySwiper = new Swiper (".swiper-container", {
-//   direction: "horizontal",
-//   loop: true,
+// Variables
+const barsButton = document.getElementById("bars-button");
+const exitButton = document.querySelector(".exit__button");
 
-//   pagination: {
-//     el: ".swiper-pagination"
-//   },
+const sidebar = document.querySelector(".nav__sidebar");
+const sidebarMenu = document.querySelector(".sidebar__menu");
+// Main Code
 
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev"
-//   }
-// })
+barsButton.addEventListener("click", () => {
+  sidebar.style.backdropFilter = "blur(8px)"
+  sidebar.style.transform = "translateX(0)";
+})
+
+exitButton.addEventListener("click", () => {
+  sidebar.style.transform = "translateX(100%)";
+  sidebar.style.backdropFilter = "blur(-10px)"
+})
